@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>RANDOM RGB </title>
+    <style>
+        #button{
+          background-color: #f4511e;
+          border: none;
+          color: white;
+          padding: 16px 32px;
+          text-align: center;
+          font-size: 32px;
+          margin: 4px 2px;
+          opacity: 0.6;
+          transition: 0.3s;
+          display: inline-block;
+          text-decoration: none;
+          cursor: pointer;
+            height: 50px;
+            width: 150px;
+            line-height: 50px;
+        }
+        #button:hover {opacity: 1}
+    </style>
+</head>
+<body>
+<h3>НАЖМИ НА <text id="tx"></text>КНОПКУ</h3> <br />
+<div id="button" onclick="click1()">ЖМЯК!</div>
+</body>
+<script>
+    function click1() {
+        red=Math.floor(Math.random()*255)
+        green=Math.floor(Math.random()*255)
+        blue=Math.floor(Math.random()*255)
+
+        setInterval(changerColor(red, green, blue), 10)
+    }
+
+    function changerColor(color1, color2, color3) {
+        color1++
+        color2++
+        color3++
+        console.log(color1)
+        console.log(color2)
+        console.log(color3)
+        document.body.style.backgroundColor= 'rgb(' + color1 + ',' + color2 + ',' + color3 + ')';
+    }
+
+</script>
+
+</html>
